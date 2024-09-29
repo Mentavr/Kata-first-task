@@ -11,7 +11,7 @@
         <header class="header">
             <div class="header__container container">
                 <div class="header-buttons__wrapper header-buttons__wrapper_right">
-                    <button class="header-button">
+                    <button class="header-button" id="burger-button">
                         <img
                             class="header__image"
                             src="./src/icons/menu-icon.svg"
@@ -78,6 +78,17 @@
                     </div>
                 </div>
             </div>
+            <aside class="burger-menu">
+                <section class="menu-container" id="burger-menu">
+                    <button class="header-button closet">
+                        <img
+                            class="header__image"
+                            src="./src/icons/user-icon.svg"
+                            alt=""
+                        />
+                    </button>
+                </section>
+            </aside>
         </header>
         <main class="main">
             <section class="container">
@@ -149,4 +160,5 @@
             </section>
         </main>
     </body>
+    <script type="module" src="index.js"></script>
 </html>
