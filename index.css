@@ -1,6 +1,7 @@
 @import url("./src/styles/variables.css");
 @import url("./src/fonts/font.css");
 @import url("./src/index.css");
+@import url("./src//burger/burger.css");
 
 html {
     height: 100%

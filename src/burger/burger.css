@@ -1,0 +1,54 @@
+.burger-menu {
+    width: 100%;
+    max-width: 360px;
+    position: absolute;
+    top: 0;
+}
+
+.menu-container {
+    position: absolute;
+    transform: translate(-400px);
+}
+
+
+.menu-container_open {
+    position: absolute;
+    width: 360px;
+    background-color: red;
+    height: 100svh;
+    z-index: 100;
+    animation-name: open;
+    animation-duration: 0.4s;
+    transform: translate(0px);
+}
+
+.menu-container_close {
+    position: absolute;
+    width: 360px;
+    background-color: red;
+    height: 100svh;
+    z-index: 100;
+    animation-name: close;
+    animation-duration: 0.4s;
+    transform: translate(-400px);
+}
+
+@keyframes open {
+    from {
+        transform: translate(-400px);
+    }
+
+    to {
+        transform: translate(0px);
+    }
+}
+
+@keyframes close {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translate(-400px);
+    }
+}
