@@ -186,6 +186,10 @@
 
 @media (min-width: 1120px) {
 
+  .header__container.container{
+    padding: 24px 24px;
+  }
+
   .header-buttons__wrapper {
     display: flex;
     align-items: center;
@@ -222,8 +226,7 @@
     display: inline-flex;
   }
 
-  .tablet,
-  header {
+  .tablet {
     display: none;
   }
 
