@@ -1,12 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./src/styles/normalize.css" />
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__wrapper header__wrapper_right">
+                    <button class="header-button__img-wrapper">
+                        <img
+                            class="header__image"
+                            src="./src/icons/menu-icon.svg"
+                            alt="icon menu"
+                        />
+                    </button>
+                    <div class="header_decoreLine tablet"></div>
+                    <button class="header-button__logo-wrapper">
+                        <img
+                            class="header__logo"
+                            src="./src/images/logo.png"
+                            alt=""
+                        />
+                    </button>
+                </div>
+                <div class="header__wrapper header__wrapper_left">
+                    <button class="header-button__img-wrapper tablet">
+                        <img
+                            class="header__image"
+                            src="./src/icons/phone-icon.svg"
+                            alt=""
+                        />
+                    </button>
+                    <button class="header-button__img-wrapper tablet">
+                        <img
+                            class="header__image"
+                            src="./src/icons/message-icon.svg"
+                            alt=""
+                        />
+                    </button>
+                    <button class="header-button__img-wrapper tablet">
+                        <img
+                            class="header__image"
+                            src="./src/icons/user-icon.svg"
+                            alt=""
+                        />
+                    </button>
+                    <div class="header_decoreLine"></div>
+                    <button class="header-button__img-wrapper">
+                        <img
+                            class="header__image"
+                            src="./src/icons/option-icon.svg"
+                            alt=""
+                        />
+                    </button>
+                    <button class="header-button__img-wrapper">
+                        <img
+                            class="header__image"
+                            src="./src/icons/search-icon.svg"
+                            alt=""
+                        />
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="container">
+                <div class="title__wrapper">
+                    <h1 class="title">Услуги и сервисы</h1>
+                    <div class="header-buttons__wrapper desktop">
+                        <div class="header-button__wrapper">
+                            <span class="header-button__description desktop"
+                                >Оставить заявку</span
+                            >
+                            <button class="header-button__img-wrapper">
+                                <img
+                                    class="header__image"
+                                    src="./src/icons/option-icon.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </div>
+                        <div class="header-button__wrapper">
+                            <span class="header-button__description desktop"
+                                >Статус ремонта</span
+                            >
+                            <button class="header-button__img-wrapper">
+                                <img
+                                    class="header__image"
+                                    src="./src/icons/search-icon.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__filter-items">
+                    <ul class="main__items">
+                        <li class="main__item active-item">
+                            <button type="button" class="main__item-button">
+                                Ремонтируемые устрой
+                            </button>
+                        </li>
+                        <li class="main__item">
+                            <button type="button" class="main__item-button">
+                                Дополнительные услуги
+                            </button>
+                        </li>
+                        <li class="main__item">
+                            <button type="button" class="main__item-button">
+                                Цены на услуги
+                            </button>
+                        </li>
+                        <li class="main__item">
+                            <button type="button" class="main__item-button">
+                                Адреса сервисных центров
+                            </button>
+                        </li>
+                        <li class="main__item">
+                            <button type="button" class="main__item-button">
+                                Специальные цены
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <p class="feedback desktop">Отзывы</p>
+                <div class="description">
+                    <div class="description__wrapper">
+                        <p class="description__service">
+                            Мы являемся авторизованным сервисным центром по
+                            ремонту техники Dell. Только у нас вы можете
+                            отремонтировать свой ноутбук Dell с официальной
+                            гарантией производителя.
+                            <br />
+                            <br />
+                            Мы успешно работаем с 1992 года и заслужили
+                            репутацию надежного партнера, что подтверждает
+                            большое количество постоянных клиентов. Мы гордимся
+                            тем, что к нам обращаются по рекомендациям и, в свою
+                            очередь, советуют нас родным и близким.
+                        </p>
+                        <button type="button" class="description__button">
+                            <img
+                                class="description__icon"
+                                src="./src/icons/arrows-icon.svg"
+                                alt=""
+                            />
+                            <p class="description__text">Читать далее</p>
+                        </button>
+                    </div>
+                    <div class="description__image-wrapper">
+                        <img
+                            class="description__image"
+                            src="./src/images/img-company.jpg"
+                            alt="company image office"
+                        />
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>

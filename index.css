@@ -1,4 +1,76 @@
-@media (max-width: 320px) {
-    
+@import url("./src/styles/variables.css");
+@import url("./src/fonts/font.css");
+@import url("./src/index.css");
+
+html {
+    height: 100%
 }
-  
+
+body {
+    font-family: var(--main-font), sans-serif;
+    color: var(--text-color-black);
+    background-color: var(--background-main-color);
+    width: 100vw;
+    min-height: max-content
+}
+
+h1 {
+    font-weight: 700;
+    line-height: 143%;
+    font-size: var(--title-text-size);
+}
+
+
+li {
+    list-style-type: none;
+    font-size: var(--link-text-size);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color-black);
+    background-color: var(--background-main-color);
+    font-weight: 500;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+body,
+p,
+h1,
+li,
+a,
+ul,
+button {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding: 24px 16px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 24px 24px;
+    }
+}
+
+@media (min-width: 1120px) {
+
+    .container {
+        padding: 42px 34px;
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+}
