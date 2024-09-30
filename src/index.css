@@ -111,20 +111,21 @@
   font-size: 1rem;
 }
 
-.main__item-button:hover {
+/* .main__item-button:hover {
   border-radius: var(--border-radius-md);
   background-color: var(--background-white-color);
-}
-
-.main__item-button:active {
-  border-radius: var(--border-radius-md);
-  background-color: var(--background-white-color);
-  opacity: 0.8;
 }
 
 .main__item:hover {
   outline: 0.125rem solid var(--background-active-color);
   border-radius: var(--border-radius-md);
+} */
+
+.main__item-button:active {
+  outline: 0.125rem solid var(--background-active-color);
+  border-radius: var(--border-radius-md);
+  background-color: var(--background-white-color);
+  opacity: 0.8;
 }
 
 .description {
@@ -170,30 +171,7 @@
   display: none;
 }
 
-/* .main__item:active {
-  outline: 0.125rem solid var(--background-active-color);
-  border-radius: var(--border-radius-md);
-  background-color: var(--background-white-color);
-}
 
-.main__item-button:active {
-  border-radius: var(--border-radius-md);
-  background-color: var(--background-white-color);
-} */
-
-
-/* @media (hover: hover) {
-  .main__item:hover {
-    outline: 0.125rem solid var(--background-active-color);
-    border-radius: var(--border-radius-md);
-    background-color: var(--background-white-color);
-  }
-
-  .main__item-button:hover {
-    border-radius: var(--border-radius-md);
-    background-color: var(--background-white-color);
-  }
-} */
 
 @media (min-width: 768px) {
   .tablet {
@@ -276,3 +254,34 @@
     font-size: 1rem;
   }
 }
+
+/* Стили для десктопа с эффектом hover */
+@media (hover: hover) {
+  .main__item:hover {
+    outline: 0.125rem solid var(--background-active-color);
+    border-radius: var(--border-radius-md);
+    background-color: var(--background-white-color);
+  }
+
+  .main__item-button:hover {
+    outline: 0.125rem solid var(--background-active-color);
+    border-radius: var(--border-radius-md);
+    background-color: var(--background-white-color);
+  }
+}
+
+/* @media (hover: none) {
+  .main__item:active,
+  .main__item-button:active {
+    outline: 0.125rem solid var(--background-active-color);
+    border-radius: var(--border-radius-md);
+    background-color: var(--background-white-color);
+    opacity: 0.8;
+  }
+
+  .main__item:hover,
+  .main__item-button:hover {
+    outline: none;
+    background-color: transparent;
+  }
+} */
