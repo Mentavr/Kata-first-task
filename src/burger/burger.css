@@ -1,54 +1,229 @@
 .burger-menu {
     width: 100%;
-    max-width: 360px;
     position: absolute;
     top: 0;
 }
 
-.menu-container {
-    position: absolute;
-    transform: translate(-400px);
+.background-menu_close {
+    background: var(--background-white-color);
+    animation-name: background-close;
+    animation-duration: 0.4s;
 }
 
+.background-menu_open {
+    width: 100%;
+    height: 100svh;
+    background: var(--background-white-color);
+    max-width: inherit;
+    z-index: 100;
+    animation-name: background-open;
+    animation-duration: 0.4s;
+}
+
+.menu-container {
+    position: absolute;
+    transform: translate(-120%);
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
 
 .menu-container_open {
     position: absolute;
-    width: 360px;
-    background-color: red;
+    width: 100%;
     height: 100svh;
     z-index: 100;
     animation-name: open;
     animation-duration: 0.4s;
     transform: translate(0px);
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+    background: var(--background-white-color);
 }
 
 .menu-container_close {
     position: absolute;
-    width: 360px;
-    background-color: red;
+    width: 100%;
     height: 100svh;
     z-index: 100;
     animation-name: close;
     animation-duration: 0.4s;
-    transform: translate(-400px);
+    transform: translate(-120%);
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+    background: var(--background-white-color);
+}
+
+.burger-menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 46px;
+}
+
+.burger-nav__items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.burger-nav {
+    margin-bottom: 32px;
+
+}
+
+.burger-nav__item {
+    font-weight: 500;
+    font-size: 16px;
+
+}
+
+.burger-nav__item_active .burger-nav__item-button {
+    color: var(--text-color-gray);
+}
+
+.burger-nav__item_active::before {
+    position: absolute;
+    content: '';
+    top: -8px;
+    left: -24px;
+    height: 32px;
+    width: 4px;
+    background-color: var(--background-active-color);
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+
+.burger-nav__item-button {
+    background-color: var(--background-white-color);
+}
+
+.burger-nav__item:active .burger-nav__item-button {
+    color: rgba(27, 28, 33, 0.8);
+}
+
+.burger-menu__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: auto;
+}
+
+.burger-menu__footer-buttons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+}
+
+.burger-menu__footer-button {
+    width: 40px;
+    height: 40px;
+    background-color: var(--pink-color);
+    border-radius: var(--border-radius-lg);
+}
+
+
+.burger-menu__footer-email {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.burger-menu__footer-phone {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.burger-menu__footer-lang-items {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 7px;
+    margin-top: 16px;
+}
+
+.burger-menu__footer-lang-item_active .burger-menu__footer-lang-button {
+    color: var(--text-color-gray)
+}
+
+
+.burger-menu__footer-button:active {
+    opacity: 0.8;
+}
+
+.burger-nav__item:active .burger-nav__item-button{
+    color: rgba(27, 28, 33, 0.8);
+}    
+
+.header-button:active {
+    opacity: 0.8;
+}
+
+.burger-menu__footer-lang-item:active .burger-menu__footer-lang-button {
+    color: rgba(27, 28, 33, 0.8);
+}
+
+
+@media (min-width: 768px) {
+
+    .burger-menu {
+        max-width: 320px;
+    }
+
+    .menu-container_open {
+        width: 320px;
+    }
+
+    .menu-container_close {
+        width: 320px;
+    }
+
+    .background-menu_open {
+        max-width: inherit;
+    }
 }
 
 @keyframes open {
     from {
-        transform: translate(-400px);
+        transform: translate(-120%);
     }
 
     to {
-        transform: translate(0px);
+        transform: translate(0);
     }
 }
 
 @keyframes close {
     from {
-        transform: translate(0px);
+        transform: translate(0);
     }
 
     to {
-        transform: translate(-400px);
+        transform: translate(-120%);
+    }
+}
+
+@keyframes background-open {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes background-close {
+    from {
+        max-width: inherit;
+        width: 100%;
+        height: 100svh;
+        opacity: 1;
+        z-index: 100;
+    }
+
+    to {
+        height: 100svh;
+        opacity: 0;
+        z-index: 1;
     }
 }

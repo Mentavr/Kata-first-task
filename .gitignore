@@ -2,4 +2,3 @@ node_modules
 .prettierrc.json
 .eslintrc.json
 eslint.config.js
-.htmlhintrc

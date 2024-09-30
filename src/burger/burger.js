@@ -1,22 +1,25 @@
 export const burger = () => {
-    const burgerMenu = document.querySelector("#burger-menu");
-    const burgerMenuButton = document.querySelector("#burger-button");
+  const burgerMenu = document.querySelector('#burger-menu');
+  const burgerMenuOpenButton = document.querySelector('#burger-open-button');
+  const burgerMenuCloseButton = document.querySelector('#burger-close-button');
+  const backgroundMenu = document.querySelector('.burger-menu');
 
-    const asd = document.querySelector(".closet")
+  burgerMenuOpenButton.addEventListener('click', ({ target }) => {
+    burgerMenu.classList.remove('menu-container_close');
+    burgerMenu.classList.add('menu-container_open');
 
-    console.log(burgerMenuButton)
+    backgroundMenu.classList.add('background-menu_open');
 
-    burgerMenuButton.addEventListener("click", ({ target }) => {
-        burgerMenu.classList.remove('menu-container_close');
-        burgerMenu.classList.add('menu-container_open');
-        console.log(burgerMenu.classList.contains("menu-container-open"))
-    })
-    console.log('work!');
-    console.log(burger);
 
-    asd.addEventListener("click", () => {
-        burgerMenu.classList.remove('menu-container_open');
-        burgerMenu.classList.add('menu-container_close');
-        console.log('close')
-    })
-}
+    console.log(burgerMenu.classList.contains('menu-container-open'));
+  });
+
+  burgerMenuCloseButton.addEventListener('click', () => {
+    burgerMenu.classList.remove('menu-container_open');
+    burgerMenu.classList.add('menu-container_close');
+    
+    backgroundMenu.classList.remove('background-menu_open');
+    backgroundMenu.classList.add('background-menu_close');
+    console.log('close');
+  });
+};
