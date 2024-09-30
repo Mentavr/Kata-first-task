@@ -1,8 +1,7 @@
 import { burger } from "./burger/burger.js"
 
-
 const app = () => {
-    burger()
+    burger();
 }
 
 export default app;
