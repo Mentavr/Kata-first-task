@@ -4,14 +4,11 @@ export const burger = () => {
   const burgerMenuCloseButton = document.querySelector('#burger-close-button');
   const backgroundMenu = document.querySelector('.burger-menu');
 
-  burgerMenuOpenButton.addEventListener('click', ({ target }) => {
+  burgerMenuOpenButton.addEventListener('click', () => {
     burgerMenu.classList.remove('menu-container_close');
     burgerMenu.classList.add('menu-container_open');
 
     backgroundMenu.classList.add('background-menu_open');
-
-
-    console.log(burgerMenu.classList.contains('menu-container-open'));
   });
 
   burgerMenuCloseButton.addEventListener('click', () => {
@@ -20,6 +17,5 @@ export const burger = () => {
     
     backgroundMenu.classList.remove('background-menu_open');
     backgroundMenu.classList.add('background-menu_close');
-    console.log('close');
   });
 };
