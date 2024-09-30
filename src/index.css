@@ -182,7 +182,7 @@
 }
 
 
-@media ((hover: hover)) {
+@media (hover: hover) {
   .main__item:hover {
     outline: 0.125rem solid var(--background-active-color);
     border-radius: var(--border-radius-md);
