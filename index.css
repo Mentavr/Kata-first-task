@@ -56,6 +56,7 @@ button {
     margin: 0;
     padding: 0;
 }
+
 .container {
     padding: 24px 16px;
 }
@@ -72,6 +73,22 @@ button {
         max-width: 1120px;
         margin: 0 auto;
     }
+}
+
+.burger-menu__footer-lang-item_active .burger-menu__footer-lang-button {
+    color: var(--text-color-gray);
+}
+
+.burger-menu__footer-button:active {
+    opacity: 0.8;
+}
+
+.burger-nav__item:active .burger-nav__item-button {
+    color: rgba(27, 28, 33, 0.8);
+}
+
+.burger-menu__footer-lang-item:active .burger-menu__footer-lang-button {
+    color: rgba(27, 28, 33, 0.8);
 }
 
 @media (hover: hover) {
@@ -96,13 +113,11 @@ button {
     }
 
 
-    .burger-nav__item:hover .burger-nav__item-button{
+    .burger-nav__item:hover .burger-nav__item-button {
         color: rgba(27, 28, 33, 0.5);
     }
 
     .burger-menu__footer-lang-item:hover .burger-menu__footer-lang-button {
         color: rgba(27, 28, 33, 0.5);
     }
-
-
 }
