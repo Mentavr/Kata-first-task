@@ -111,10 +111,10 @@
   font-size: 1rem;
 }
 
-.main__item-button:hover {
+/* .main__item-button:hover {
   border-radius: var(--border-radius-md);
   background-color: var(--background-white-color);
-}
+} */
 
 .main__item-button:active {
   border-radius: var(--border-radius-md);
@@ -122,10 +122,10 @@
   opacity: 0.8;
 }
 
-.main__item:hover {
+/* .main__item:hover {
   outline: 0.125rem solid var(--background-active-color);
   border-radius: var(--border-radius-md);
-}
+} */
 
 .description {
   position: relative;
@@ -249,5 +249,30 @@
     color: var(--text-color-gray);
     font-weight: 500;
     font-size: 1rem;
+  }
+}
+
+.main__item:active {
+  outline: 0.125rem solid var(--background-active-color);
+  border-radius: var(--border-radius-md);
+  background-color: var(--background-white-color);
+}
+
+.main__item-button:active {
+  border-radius: var(--border-radius-md);
+  background-color: var(--background-white-color);
+}
+
+
+@media ((hover: hover) and (pointer: coarse)) {
+  .main__item:hover {
+    outline: 0.125rem solid var(--background-active-color);
+    border-radius: var(--border-radius-md);
+    background-color: var(--background-white-color);
+  }
+
+  .main__item-button:hover {
+    border-radius: var(--border-radius-md);
+    background-color: var(--background-white-color);
   }
 }
